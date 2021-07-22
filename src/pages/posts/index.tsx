@@ -38,7 +38,17 @@ export default function Posts({ posts }: PostProps) {
 //SSR
 // Os dados são montados no servidor através do jsvascript
 //O node executa esse componente por primeiro
-export const getServerSideProps: GetServerSideProps<PostProps> = async () => {
+/*export const getServerSideProps: GetServerSideProps<PostProps> = async () => {
+  const response = await fetch('http://localhost:3333/posts');
+  const posts = await response.json();
+
+  return {
+    props: { posts }, // will be passed to the page component as props
+  }
+}*/
+
+// A pagina é gerada no build já com todos os dados carregados
+export const getStaticProps: GetServerSideProps<PostProps> = async () => {
   const response = await fetch('http://localhost:3333/posts');
   const posts = await response.json();
 
