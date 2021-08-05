@@ -1,34 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">
+  <img alt="podcastr" title="podcastr" src=".github/logo.svg" />
+</h1>
 
-## Getting Started
+<p align="center">
+  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=8257E5&labelColor=000000">
+</p>
 
-First, run the development server:
+<br>
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+<p align="center">
+  <img alt="Blog" src=".github/tela_inicial.png" width="100%">
+</p>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Tecnologias
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.tsx`.
+- [Next.js](https://nextjs.org/)
+- [Prismic CMS](https://prismic.io/)
+- [TypeScript](https://www.typescriptlang.org/)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## 💻 Projeto
 
-## Learn More
+O devnews é um aplicativo de blog que acessar informações cadastradas no Prismic CMS.
 
-To learn more about Next.js, take a look at the following resources:
+## 🔖 Preview
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Você pode visualizar o layout do projeto através [desse link]()
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 🚀 Como executar
 
-## Deploy on Vercel
+- Clone o repositório
+- Instale as dependências com `yarn`
+- Inicie com `yarn dev`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Agora você pode acessar [`localhost:3000`](http://localhost:3000) do seu navegador.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 📄 Licença
+
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+
+---
+
+Feito com ♥ by Yuri Brasil 👋🏻
