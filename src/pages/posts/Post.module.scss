@@ -1,48 +1,41 @@
-.conteiner {
+.container {
     max-width: 1120px;
     margin: 0 auto;
     padding: 0 2rem;
 }
 
-.posts {
+.post {
     max-width: 720px;
     margin: 5rem auto 0;
 
-    a {
-        display: block;
-
-        & + a {
-            margin-top: 2rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--gray700);
-        }
-
-        time {
-            font-size: 1rem;
-            display: flex;
-            align-items: center;
-            color: var(--gray300);
-        }
-
-        strong {
-            display: block;
-            font-size: 1.5rem;
-            margin-top: 1rem;
-            line-height: 2rem;
-            transition: color 0.2s;
-        }
-
-        &:hover strong {
-            color: var(--primary);
-        }
-
-        p {
-            color: var(--gray300);
-            margin-top: 0.5rem;
-            line-height: 1.625rem;
-        }
+    h1 {
+        font-size: 3.5rem;
+        font-weight: 900;
     }
 
+    time {
+        display: block;
+        font-size: 1rem;
+        color: var(--gray300);
+        margin-top: 1.5rem;
+    }
 
+    .content {
+        margin-top: 2rem;
+        line-height: 2rem;
+        font-size: 1.125rem;
+        color: var(--gray300);
+
+        p, ul {
+            margin: 1.5rem 0;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+
+            li {
+                margin: 0.5rem 0;
+            }
+        }
+    }
 }
-

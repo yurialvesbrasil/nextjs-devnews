@@ -5,8 +5,8 @@ import Link from 'next/link';
 import React from 'react';
 import SEO from '../../components/SEO';
 import { getPrismicClient } from '../../services/prismic';
-import styles from './Post.module.scss';
-import Post from './[id]';
+import styles from './Posts.module.scss';
+import Post from './[slug]';
 
 interface Post {
   slug: string | undefined;
@@ -38,7 +38,7 @@ export default function Posts({ posts }: PostProps) {
       <main className={styles.container}>
         <div className={styles.posts}>
          {posts.map(post => (
-            <Link key={post.slug} href="#">
+            <Link key={post.slug} href={`/posts/${post.slug}`} >
             <a>
               <time>{post.updateAt}</time>
               <strong>{post.title}</strong>
