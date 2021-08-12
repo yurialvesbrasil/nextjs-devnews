@@ -1,8 +1,7 @@
 import React from "react";
 import SEO from "../components/SEO";
 import styles from "../styles/home.module.scss";
-import LogoHome from "../../public/home.svg";
-import  Image from 'next/image';
+
 
 export default function Home() {
   return (
@@ -19,7 +18,7 @@ export default function Home() {
             <span>relevantes para o seu apredizado</span>
           </p>
         </section>
-        <Image src={LogoHome} alt="Home image!" />
+        <img src="./home.svg" alt="Home image!" />
       </main>
     </>
   )

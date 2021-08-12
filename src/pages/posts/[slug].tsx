@@ -4,7 +4,6 @@ import React from 'react';
 import SEO from '../../components/SEO';
 import styles from './Post.module.scss';
 import { getPrismicClient } from '../../services/prismic';
-import Prismic from '@prismicio/client';
 import { RichText } from 'prismic-dom';
 
 interface PostProps {
@@ -12,7 +11,7 @@ interface PostProps {
     slug: string | undefined;
     title: string;
     content: any;
-    updateAt: string;
+    updatedAt: string;
   }
 }
 
@@ -20,7 +19,7 @@ interface PostProps {
 export default function Post({ post }: PostProps) {
   const router = useRouter();
 
-  if(router.isFallback){
+  if(router?.isFallback){
     return <p className={styles.container} >Loading...</p>
   }
 
@@ -30,7 +29,7 @@ export default function Post({ post }: PostProps) {
       <main className={styles.container}>
         <article className={styles.posts}>
           <h1>{post.title}</h1>
-          <time>{post.updateAt}</time>
+          <time>{post.updatedAt}</time>
           <div className={styles.content} dangerouslySetInnerHTML={{ __html: post.content}} />
         </article>
       </main>
@@ -63,7 +62,7 @@ export const getStaticProps: GetStaticProps<PostProps> = async (context) => {
       slug: String(slug),
       title: RichText.asText(response.data.title),
       content: RichText.asText(response.data.content),
-      updateAt: response.last_publication_date ? new Date(response.last_publication_date).toLocaleDateString('pt-BR', {
+      updatedAt: response.last_publication_date ? new Date(response.last_publication_date).toLocaleDateString('pt-BR', {
         day: '2-digit',
         month: 'long',
         year: 'numeric',
