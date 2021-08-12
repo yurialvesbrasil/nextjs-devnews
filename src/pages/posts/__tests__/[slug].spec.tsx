@@ -11,18 +11,15 @@ const post = {
   updatedAt: '25 de dezembro de 2021'
 };
 
-interface ResolvedPostMocked {
-  uid: string,
-  data: {
-    title: [
-      { type: string, text: string }
-    ],
-    content: [
-      { type: string, text: string }
-    ]
-  },
-  last_publication: string,
-};
+jest.mock('next/router', () => {
+  return {
+    useRouter() {
+      return {
+        asPath: '/',
+      };
+    },
+  };
+});
 
 jest.mock('../../../services/prismic');
 

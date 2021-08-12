@@ -19,7 +19,7 @@ interface PostProps {
 export default function Post({ post }: PostProps) {
   const router = useRouter();
 
-  if(router?.isFallback){
+  if(router.isFallback){
     return <p className={styles.container} >Loading...</p>
   }
 
