@@ -1,13 +1,14 @@
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import React from 'react';
 import Post, { getStaticProps } from '../[slug]';
 import { getPrismicClient } from '../../../services/prismic';
 import { mocked } from 'ts-jest/utils';
 
+
 const post = {
   slug: 'test-new-post',
   title: 'Title for new post',
-  content: '<p> Post content </p>',
+  content: '<p>Post content</p>',
   updatedAt: '25 de dezembro de 2021'
 };
 
@@ -41,7 +42,7 @@ describe('Post Page', () => {
       getByUID: jest.fn().mockResolvedValueOnce({
         data: {
           title: [{ type: 'heading', text: 'Title for new post' }],
-          content: [{ type: 'paragraph', text: '<p> Post content </p>' }],
+          content: [{ type: 'paragraph', text: 'Post content' }],
         },
         last_publication_date: '12-25-2021',
       }),
@@ -50,6 +51,8 @@ describe('Post Page', () => {
     const response = await getStaticProps({
       params: { slug: 'test-new-post' }
     } as any);
+
+    var parser = new DOMParser();
 
     expect(response).toEqual(
       expect.objectContaining({
